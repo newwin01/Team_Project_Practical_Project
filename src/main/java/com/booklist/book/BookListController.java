@@ -39,6 +39,7 @@ public class BookListController {
     @RequestMapping(value = "/fileUpload", method = RequestMethod.POST)
     public String upload(@RequestParam("uploadFile") MultipartFile file, HttpServletRequest request, BookListVO vo) throws IOException{
         String uploadFolder = request.getServletContext().getRealPath("upload");
+        System.out.println(uploadFolder);
         File dir = new File(uploadFolder);
         if(!dir.exists()) dir.mkdirs();
         String savedFileName = "";
@@ -92,6 +93,7 @@ public class BookListController {
         String filename = vo.getPhoto();
         System.out.println(filename);
         path = request.getServletContext().getRealPath("upload");
+        System.out.println(path);
         File f = new File(path + "/" + filename);
         if(f.exists()) f.delete();
 
