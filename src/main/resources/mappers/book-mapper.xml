@@ -15,7 +15,9 @@
             writer       = #{writer},
             price        = #{price},
             pay_method   = #{pay_method},
-            arrived_date = #{arrived_date}
+            arrived_date = #{arrived_date},
+            photo = #{photo},
+            month = #{month}
         where seq = #{seq}
     </update>
     <delete id="deleteBook">

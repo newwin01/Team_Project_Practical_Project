@@ -1,6 +1,13 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page import="java.util.Date" %>
+<%@ page import="java.text.SimpleDateFormat" %>
+<%
+    Date now = new Date();
+    SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy년 MM월 dd일");
+    String strNowDate = simpleDateFormat.format(now);
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -87,7 +94,10 @@
                     핸드폰 결제
                 </c:if>
             </td>
-            <td>${u.getArrived_date()}</td>
+            <td>
+
+                <%=strNowDate%> + ${u.getArrived_date()} 일
+            </td>
             <td>${u.getRegdate()}</td>
             <td>${u.getModdate()}</td>
             <td>

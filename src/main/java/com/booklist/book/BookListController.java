@@ -81,8 +81,30 @@ public class BookListController {
         model.addAttribute("u",bookListVO);
         return "book/editform";
     }
+    @RequestMapping(value = "/fileUploadEdit",method = RequestMethod.POST)
+    public String uploadEdit(@RequestParam("uploadFile") MultipartFile file, HttpServletRequest request, BookListVO vo) throws IOException{
+        String uploadFolder = request.getServletContext().getRealPath("upload");
+        File dir = new File(uploadFolder);
+        if(!dir.exists()) dir.mkdirs();
+        System.out.println(vo.getPhoto());
+        String savedFileName = "";
+        String originalFileName = file.getOriginalFilename();
+        System.out.println(originalFileName);
+        if(!originalFileName.isEmpty()){
+            UUID uuid = UUID.randomUUID();
+            savedFileName = uuid.toString() + "_" + originalFileName;
+            // 4. 파일 생성
+            File file1 = new File(uploadFolder+"/"+savedFileName);
+            // 5. 서버로 전송
+            file.transferTo(file1);
+            vo.setPhoto(savedFileName);
+        }
+        return editPostOk(vo);
+    }
     @RequestMapping(value = "/editok", method = RequestMethod.POST)
     public String editPostOk(BookListVO vo){
+        System.out.println(vo.getTitle());
+        System.out.println(vo.getPay_method());
         if(bookListService.updateBook(vo)==0)
             System.out.println("실패");
         else

@@ -9,14 +9,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c932acc9-70f7-4ec0-88f5-a5373c9c4acf" name="변경" comment="Photo function updated">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/book/searchlist.jsp" afterDir="false" />
+    <list default="true" id="c932acc9-70f7-4ec0-88f5-a5373c9c4acf" name="변경" comment="Search function updated">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/booklist/book/BookListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booklist/book/BookListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/booklist/book/BookListDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booklist/book/BookListDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/booklist/book/BookListService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booklist/book/BookListService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/booklist/book/IBookListService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booklist/book/IBookListService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booklist/book/BookListVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booklist/book/BookListVO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/book-mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/book-mapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/book/addpostform.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/book/addpostform.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/book/editform.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/book/editform.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/book/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/book/list.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -195,6 +194,8 @@
       <workItem from="1671112111368" duration="4780000" />
       <workItem from="1671117351699" duration="81000" />
       <workItem from="1671159893803" duration="5412000" />
+      <workItem from="1671172406213" duration="42000" />
+      <workItem from="1671172912881" duration="11937000" />
     </task>
     <task id="LOCAL-00001" summary="Project Set">
       <created>1671072778568</created>
@@ -217,7 +218,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671117423255</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Search function updated">
+      <created>1671172441223</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1671172441223</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,6 +246,7 @@
     <MESSAGE value="Project Set" />
     <MESSAGE value="File Upload, sort list updated" />
     <MESSAGE value="Photo function updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="Photo function updated" />
+    <MESSAGE value="Search function updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="Search function updated" />
   </component>
 </project>

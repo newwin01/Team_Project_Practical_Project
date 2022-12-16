@@ -43,15 +43,15 @@ public class BookListVO {
         this.mod_date = mod_date;
     }
 
-    public String getArrived_date() {
+    public int getArrived_date() {
         return arrived_date;
     }
 
-    public void setArrived_date(String arrived_date) {
+    public void setArrived_date(int arrived_date) {
         this.arrived_date = arrived_date;
     }
 
-    private String arrived_date;
+    private int arrived_date;
     private int price;
     private int pay_method;
 

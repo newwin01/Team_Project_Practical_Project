@@ -14,9 +14,9 @@
         <tr><td>Title:</td><td><input type="text" name="title"/></td></tr>
         <tr><td>Category:</td><td><input type="text" name="category"/></td></tr>
         <tr><td>Writer:</td><td><input type="text" name="writer"/></td></tr>
-        <tr><td>Price: </td><td><input type="text" name="price"></td></tr>
+        <tr><td>Price: </td><td><input type="number" name="price"></td></tr>
         <tr><td>Payment:</td><td><input type="text" name="pay_method"></td></tr>
-        <tr><td>Date:</td><td><input type="date" name="arrived_date"></td></tr>
+        <tr><td>Date:</td><td><input type="number" name="arrived_date"></td></tr>
         <tr><td>Photo:</td><td><input type="file" name="uploadFile"></td></tr>
         <tr><td>Month: </td><td><input type="text" name="month"></td></tr>
     </table>
