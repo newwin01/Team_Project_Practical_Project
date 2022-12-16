@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,7 +9,6 @@
         @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400');
         body, html {
             font-family: 'Source Sans Pro', sans-serif;
-            background-color:antiquewhite;
             padding: 0;
             margin: 0;
         }
@@ -171,6 +171,20 @@
         }
     </script>
 </head>
+
+<header>
+    <div class="navbar navbar-dark mbg box-shadow">
+        <div class="container d-flex justify-content-between" onclick="location.href='list';">
+            <a href="#" class="navbar-brand d-flex align-items-center">
+                <strong style="center: 5px">이 달의 책읽기</strong>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </div>
+</header>
+
 <body id="particles-js"></body>
 <div class="animated bounceInDown">
     <div class="container">
