@@ -23,6 +23,7 @@ public class BookListController {
     @RequestMapping(value = "/list", method = RequestMethod.GET)
     public String boardList(Model model){
         model.addAttribute("list",bookListService.getBookList());
+
         return "book/list";
     }
 
@@ -30,6 +31,13 @@ public class BookListController {
     public String boardListSort(Model model){
         model.addAttribute("list",bookListService.getBookListSort());
         return "book/listsort";
+    }
+
+    @RequestMapping(value = "/search", method = RequestMethod.POST)
+    public String searchPost(@RequestParam("keyword")String keyword,Model model){
+        System.out.println(keyword);
+        model.addAttribute("list",bookListService.searchBookList(keyword));
+        return "book/searchlist";
     }
 
     @RequestMapping(value = "/add",method = RequestMethod.GET)
@@ -58,8 +66,6 @@ public class BookListController {
     }
 
     public String addPostOK(BookListVO vo)  {
-
-        System.out.println("000");
         int i = bookListService.insertBook(vo);
         if(i==0)
             System.out.println("실패");
@@ -67,6 +73,7 @@ public class BookListController {
             System.out.println("성공");
         return "redirect:list";
     }
+
 
     @RequestMapping(value = "/editform/{id}",method = RequestMethod.GET)
     public String editPost(@PathVariable("id") int id, Model model){

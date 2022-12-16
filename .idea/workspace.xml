@@ -9,11 +9,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c932acc9-70f7-4ec0-88f5-a5373c9c4acf" name="변경" comment="File Upload, sort list updated">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/img/snowman.jpg" afterDir="false" />
+    <list default="true" id="c932acc9-70f7-4ec0-88f5-a5373c9c4acf" name="변경" comment="Photo function updated">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/book/searchlist.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/booklist/book/BookListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booklist/book/BookListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booklist/book/BookListDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booklist/book/BookListDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booklist/book/BookListService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booklist/book/BookListService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/booklist/book/IBookListService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/booklist/book/IBookListService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/book-mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/book-mapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/book/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/book/list.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,8 +32,8 @@
       <list>
         <option value="spring-beans.schema" />
         <option value="Interface" />
-        <option value="Jsp File" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -52,24 +56,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/jangsechang/IdeaProjects/Team_Project1/src/main/webapp",
-    "project.structure.last.edited": "SDK",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "spring.configuration.checksum": "24d321a9aae4ba93344b7ab336fc2274"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/jangsechang/IdeaProjects/Team_Project1/src/main/webapp&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDK&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;24d321a9aae4ba93344b7ab336fc2274&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mariadb"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mariadb&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/webapp" />
@@ -189,6 +193,8 @@
       <workItem from="1671066806880" duration="4000" />
       <workItem from="1671071533322" duration="26490000" />
       <workItem from="1671112111368" duration="4780000" />
+      <workItem from="1671117351699" duration="81000" />
+      <workItem from="1671159893803" duration="5412000" />
     </task>
     <task id="LOCAL-00001" summary="Project Set">
       <created>1671072778568</created>
@@ -204,7 +210,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671113365369</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Photo function updated">
+      <created>1671117423255</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1671117423255</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,6 +237,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Project Set" />
     <MESSAGE value="File Upload, sort list updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="File Upload, sort list updated" />
+    <MESSAGE value="Photo function updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="Photo function updated" />
   </component>
 </project>

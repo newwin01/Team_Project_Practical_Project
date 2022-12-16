@@ -102,6 +102,14 @@
     </c:forEach>
 </table>
 <br/><a button type="button" onclick="location.href='listsort'">월별 정렬</a>
+<form action="search" method="post">
+    <div class="search_wrap">
+        <div class="search_area">
+            <input type="text" name="keyword">
+            <button type="submit">Search</button>
+        </div>
+    </div>
+</form>
 <br/><a button type="button" onclick="location.href='add'">Add New Post</a>
 <br/><a button type="button" onclick="location.href='../login/logout'">Logout</a>
 </body>

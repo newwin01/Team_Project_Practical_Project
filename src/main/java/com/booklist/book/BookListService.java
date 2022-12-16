@@ -41,7 +41,8 @@ public class BookListService implements IBookListService{
     }
 
     @Override
-    public List<BookListVO> searchBookList() {
-        return null;
+    public List<BookListVO> searchBookList(String keyword) {
+        System.out.println(keyword);
+        return bookListDAO.searchBookList(keyword);
     }
 }

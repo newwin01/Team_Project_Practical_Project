@@ -8,5 +8,5 @@ public interface IBookListService {
     public int updateBook(BookListVO vo);
     public BookListVO getBook(int seq);
     public List<BookListVO> getBookList();
-    public List<BookListVO> searchBookList();
+    List<BookListVO> searchBookList(String keyword);
 }

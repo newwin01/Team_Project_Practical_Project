@@ -38,8 +38,9 @@
         from BookList
         order by month desc
     </select>
-    <select id="searchBook">
-        select from BookList
-        where title like '%'||#{searchName}||'%'
+    <select id="searchBook" resultType="book">
+        select *
+        from BookList
+        where title like concat('%',#{keyword},'%')
     </select>
 </mapper>

@@ -38,4 +38,10 @@ public class BookListDAO {
         List<BookListVO> list = sqlSession.selectList("Book.getBookListMonth");
         return list;
     }
+
+    public List<BookListVO> searchBookList(String keyword){
+        System.out.println(keyword);
+        List<BookListVO> list = sqlSession.selectList("Book.searchBook", keyword);
+        return list;
+    }
 }
