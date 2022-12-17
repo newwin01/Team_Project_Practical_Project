@@ -51,17 +51,14 @@ public class BookListController {
         File dir = new File(uploadFolder);
         if(!dir.exists()) dir.mkdirs();
         String savedFileName = "";
-        // 2. 원본 파일 이름 알아오기
         String originalFileName = file.getOriginalFilename();
-        // 3. 파일 이름 중복되지 않게 이름 변경(서버에 저장할 이름) UUID 사용
-        UUID uuid = UUID.randomUUID();
-        savedFileName = uuid.toString() + "_" + originalFileName;
-        // 4. 파일 생성
-        File file1 = new File(uploadFolder+"/"+savedFileName);
-        // 5. 서버로 전송
-        file.transferTo(file1);
-        System.out.println(uploadFolder+"/"+savedFileName);
-        vo.setPhoto(savedFileName);
+        if(!originalFileName.isEmpty()){
+            UUID uuid = UUID.randomUUID();
+            savedFileName = uuid.toString() + "_" + originalFileName;
+            File file1 = new File(uploadFolder+"/"+savedFileName);
+            file.transferTo(file1);
+            vo.setPhoto(savedFileName);
+        }
         return addPostOK(vo);
     }
 
@@ -93,11 +90,11 @@ public class BookListController {
         if(!originalFileName.isEmpty()){
             UUID uuid = UUID.randomUUID();
             savedFileName = uuid.toString() + "_" + originalFileName;
-            // 4. 파일 생성
             File file1 = new File(uploadFolder+"/"+savedFileName);
-            // 5. 서버로 전송
             file.transferTo(file1);
             vo.setPhoto(savedFileName);
+        } else{
+            vo.setPhoto(null);
         }
         return editPostOk(vo);
     }

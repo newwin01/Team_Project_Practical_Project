@@ -88,6 +88,23 @@
     .sort:hover {
       background: rgb(125, 143, 105);
     }
+    .logout {
+      border:0;
+      background: rgb(125, 143, 105);
+      color: #fafafa;
+      border-radius: 100px;
+      width: 100px;
+      height: 30px;
+      font-size: 16px;
+      position: absolute;
+      left: 78%;
+      transition: 0.3s;
+      cursor: pointer;
+      text-align: center;
+    }
+    .logout:hover {
+      background: rgb(125, 143, 105);
+    }
   </style>
 
   <script>
@@ -107,7 +124,8 @@
   </div>
 </form>
 <button id="add" type="button" class="buy"><a href="add" style="color: white; text-decoration: none; font-weight: 800;">책 추가하기</a></button>
-<button id="sort" type="button" class="sort"><a href="listsort" style="color: white; text-decoration: none; font-weight: 800;">월별 정렬</a></button>
+<button id="sort" type="button" class="sort"><a href="list" style="color: white; text-decoration: none; font-weight: 800;">등록 정렬</a></button>
+<button id="logout" type="button" class="logout"><a href="../login/logout" style="color: white; text-decoration: none; font-weight: 800;">로그아웃</a></button>
 <body>
 
 <div class="album py-5 bg-light">
@@ -117,7 +135,9 @@
       <c:forEach items="${list}" var="u" varStatus="status">
         <div class="col">
           <div class="card shadow-sm">
-            <img width="inherit" height="440px" src="${u.getPhoto()}>">
+            <c:if test="${u.getPhoto() ne ''}"><br />
+              <img width="inherit" height="440px" src="${pageContext.request.contextPath}/upload/${u.getPhoto()}">
+            </c:if>
             <div class="card-body">
               <h5>${u.getTitle()}</h5>
 

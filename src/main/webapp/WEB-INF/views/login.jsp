@@ -1,5 +1,5 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"
+         isELIgnored="false" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -184,17 +184,15 @@
         </div>
     </div>
 </header>
-
+<script>login_fail(${login_f})</script>
 <body id="particles-js"></body>
 <div class="animated bounceInDown">
     <div class="container">
-        <script>login_fail(${login_f})</script>
         <span class="error animated tada" id="msg"></span>
         <form name="form1" class="box" method="post" action="loginOk">
             <input type="text" name="userid" placeholder="userid" autocomplete="off">
             <i class="typcn typcn-eye" id="eye"></i>
             <input type="password" name="password" placeholder="passsword" id="pwd" autocomplete="off">
-
             <input type="submit" value="Sign in" class="btn1">
         </form>
     </div>
