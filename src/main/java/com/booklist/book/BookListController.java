@@ -93,7 +93,7 @@ public class BookListController {
             File file1 = new File(uploadFolder+"/"+savedFileName);
             file.transferTo(file1);
             vo.setPhoto(savedFileName);
-        } else{
+        } else if(vo.getPhoto().isEmpty()) {
             vo.setPhoto(null);
         }
         return editPostOk(vo);
