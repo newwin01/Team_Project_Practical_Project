@@ -113,14 +113,14 @@
 <div class="album py-5 bg-light">
     <div class="container">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-
             <c:forEach items="${list}" var="u" varStatus="status">
                 <div class="col">
                     <div class="card shadow-sm">
-                        <img width="inherit" height="440px" src="${u.getPhoto()}>">
+                        <c:if test="${u.getPhoto() ne ''}"><br />
+                            <img width="inherit" height="440px" src="${pageContext.request.contextPath}/upload/${u.getPhoto()}">
+                        </c:if>
                         <div class="card-body">
                             <h5>${u.getTitle()}</h5>
-
                             <p class="card-text" style="height: 30px; overflow: hidden;">작가 - ${u.getWriter()}</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <small class="text-muted">카테고리 - ${u.getCategory()}<br>예상 배송 도착일 - <%=strNowDate%> + ${u.getArrived_date()} 일<br>가격 - ${u.getPrice()}원<br>${u.getMonth()}월의 베스트셀러

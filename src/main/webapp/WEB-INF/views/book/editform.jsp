@@ -181,15 +181,15 @@
     <div class="container">
         <span class="error animated tada" id="msg"></span>
         <form name="form1" class="box" method="post" action="../fileUploadEdit" enctype="multipart/form-data">
+            <input type="hidden" name="seq" value="${u.getSeq()}"/>
+            <input type="text" name="title" placeholder="제목: ${u.getTitle()}"  value="${u.getTitle()}" id="title" autocomplete="off">
 
-            <input type="text" name="title" placeholder="제목: ${u.getTitle()}" id="title" autocomplete="off">
+            <input type="text" name="category" placeholder="분류: ${u.getCategory()}" value="${u.getCategory()}" id="category" autocomplete="off">
 
-            <input type="text" name="category" placeholder="분류: ${u.getCategory()}" id="category" autocomplete="off">
-
-            <input type="text" name="writer" placeholder="작가: ${u.getWriter()}" id="writer" autocomplete="off">
+            <input type="text" name="writer" placeholder="작가: ${u.getWriter()}" value="${u.getWriter()}" id="writer" autocomplete="off">
 
 
-            <input type="number" name="price" placeholder="가격: ${u.getPrice()}원" id="price" autocomplete="off">
+            <input type="number" name="price" placeholder="가격: ${u.getPrice()}원" value="${u.getPrice()}" id="price" autocomplete="off">
 
             <input type='radio'
                    name='pay_method'
@@ -201,14 +201,15 @@
                    name='pay_method'
                    value='2' /> 핸드폰 결제
 
-            <input type="number" name="arrived_date" placeholder="예상 배송일: ${u.getArrived_date()}일" id="arrived_date" autocomplete="off">
+            <input type="number" name="arrived_date" placeholder="예상 배송일: ${u.getArrived_date()}일" value="${u.getArrived_date()}" id="arrived_date" autocomplete="off">
             <br>
-            <input type="file" name="uploadFile" placeholder="${u.getPhoto()}" id="uploadFile" autocomplete="off">
+            <input type="file" name="uploadFile" value="${u.getUploadFile()}" id="uploadFile" autocomplete="off">
+            <input type="hidden" name="photo" value="${u.getPhoto()}">
             <c:if test="${u.getPhoto() ne ''}">
                 <img src="${pageContext.request.contextPath}/upload/${u.getPhoto()}" class="photo" width="25%" height="25%">
             </c:if>
 
-            <input type="number" name="month" placeholder="${u.getMonth()}월의 베스트셀러" id="month" autocomplete="off">
+            <input type="number" name="month" placeholder="${u.getMonth()}월의 베스트셀러" value="${u.getMonth()}" id="month" autocomplete="off">
             <button value="Cancel" class="btn btn-danger" onclick="history.back()"> 취소 </button>
             <input type="submit" class="btn btn-primary" value="수정">
         </form>

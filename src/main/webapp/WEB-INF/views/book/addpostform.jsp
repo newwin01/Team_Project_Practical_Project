@@ -203,11 +203,7 @@
 
             <input type="number" name="arrived_date" placeholder="예상 배송일 입력(정수)" id="arrived_date" autocomplete="off">
             <br>
-            <input type="file" name="uploadFile" placeholder="${u.getPhoto()}" id="uploadFile" autocomplete="off">
-            <c:if test="${u.getPhoto() ne ''}">
-                <img src="${pageContext.request.contextPath}/upload/${u.getPhoto()}" class="photo" width="25%" height="25%">
-            </c:if>
-
+            <input type="file" name="uploadFile" placeholder="책 사진" id="uploadFile" autocomplete="off">
             <input type="number" name="month" placeholder="베스트셀러 월 입력(정수)" id="month" autocomplete="off">
             <button value="Cancel" class="btn btn-danger" onclick="history.back()"> 취소 </button>
             <input type="submit" class="btn btn-primary" value="추가">
